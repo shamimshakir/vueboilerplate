@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    background-color: #f5f6fa;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body, html {
+    height: 100vh;
+}
+
+
+/***** Header CSS Start *****/
+.header {
+    background-color: #fff;
+    height: 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.header .header__left .logo-area img {
+    height: 40px;
+}
+
+.header__user_area .user__area .user__icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #919191;
+}
+
+.header__user_area .user__area .user__icon i {
+    margin-right: 6px;
+}
+
+.header__right__search .search_box input {
+    border: 1px solid #ebeeff;
+    border-radius: 3px;
+    padding: 8px 6px 8px 28px;
+    box-sizing: border-box;
+    outline: none;
+    width: 300px;
+    background: #f8f9ff;
+}
+
+.header__right__search .search_box input:focus {
+    background: #f5f6fa;
+    border: 1px solid #b3b3b3;
+    transition: .3s;
+}
+
+.header__right__search .search_box {
+    position: relative;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.header__right .header__right__search {
+    margin-right: 62px;
+}
+
+.header__right__search .search_box i {
+    position: absolute;
+    left: 7px;
+    top: 9px;
+    color: #cdcdcd91;
+}
+
+/***** Header CSS End *****/
+
+/***** Sidebar CSS Start *****/
+.child_of_icon_manu {
+    background-color: #f8f9fd;
+    width: 200px;
+}
+
+.icon__only {
+    background-color: #f1f3ff;
+}
+
+.main_ground {
+    display: flex;
+    height: calc(100vh - 50px);
+    flex-direction: row;
+}
+
+.sidebar__nav {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.icon__only ul li a {
+    position: relative;
+    display: block;
+    width: 40px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: .3s;
+    margin: 10px 0;
+    opacity: .5;
+    color: #715cef;
+}
+
+.icon__only ul > li.active > a::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    content: "";
+    background: #715cef;
+    transition: .2s;
+    opacity: 1;
+}
+
+.icon__only ul > li.active > a {
+    background: #fff;
+    opacity: 1;
+}
+
+.child_of_icon_manu .loaded_items {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.child_of_icon_manu .loaded_items {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.child_of_icon_manu .loaded_items > ul > li {
+    display: block;
+    list-style: none;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.child_of_icon_manu .loaded_items > ul > li > a {
+    text-decoration: none;
+    color: #b2b4bd;
+    font-weight: 500;
+}
+
+.child_of_icon_manu .loaded_items > ul > li.active > a { 
+    color: #333;
+}
+ 
+.child_of_icon_manu .loaded_items > ul {
+    margin-top: 16px;
+}
+
+.child_of_icon_manu .loaded_items .title-of-parent h3 {
+    color: #333;
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.child_of_icon_manu .loaded_items .title-of-parent h3 i {
+    opacity: 0.3;
+}
+.child_of_icon_manu .loaded_items > ul > li > ul {  
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    /* display: none; */
+}
+.child_of_icon_manu .loaded_items > ul > li.active > ul {
+    opacity: 1;
+    height: auto;
+    /* display: block;
+    animation: fade_in_show 0.5s; */
+}
+/* @keyframes fade_in_show {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+} */
+/***** Sidebar CSS End *****/
+
+/***** Content Area CSS Start *****/
+.content__area {
+    width: calc(100% - 240px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+/***** Content Area CSS End *****/
+
+
+.fixedBox {
+    position: fixed;
+    background: red;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    color: white;
+    font-size: 21px;
+}
